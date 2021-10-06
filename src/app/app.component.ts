@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'trelloAngular';
+  parentMessage = "Mensaje desde parent"
+  image = "https://picsum.photos/200/300"
 }

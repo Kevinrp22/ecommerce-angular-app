@@ -1,0 +1,13 @@
+<mat-card>
+  <mat-card-header>
+    <p>{{ product.id }}</p>
+    <mat-card-title>{{ product.title }}</mat-card-title>
+  </mat-card-header>
+  <img mat-card-image src="{{ product.image }}" alt="" width="100" />
+  <mat-card-content>
+    <p>{{ product.description }}</p>
+    <p>price: {{ product.price }}</p>
+    <p>category: {{ product.category }}</p>
+    <div>rate: {{ product.rating.rate }} count: {{ product.rating.count }}</div>
+  </mat-card-content>
+</mat-card>
