@@ -1,0 +1,19 @@
+<div class="login">
+  <h1>Login</h1>
+  <form>
+    <mat-form-field appearance="fill">
+      <mat-label>Correo electronico</mat-label>
+      <input matInput placeholder="pat@example.com" [formControl]="email" required>
+      <mat-error *ngIf="email.hasError('required')">"No los puedes dejar vacio!"</mat-error>
+      <mat-error *ngIf="email.hasError('email')">"Introduce un email correcto!"</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Contraseña</mat-label>
+      <input matInput placeholder="*********" [formControl]="password" required>
+      <mat-error *ngIf="password.hasError('required')">No lo puedes dejar vacio!</mat-error>
+      <mat-error *ngIf="password.hasError('minLenght')">Escribe una contraseña minimo 6 caracteres</mat-error>
+    </mat-form-field>
+    <button type="submit"(click)="login()">Iniciar Sesión </button>
+  </form>
+</div>

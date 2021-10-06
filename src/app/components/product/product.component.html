@@ -1,9 +1,11 @@
-<mat-card>
+<mat-card class="card">
+  <div class="container_img">
+    <img mat-card-image src="{{ product.image }}" alt="" class="card_image" />
+  </div>
   <mat-card-header>
     <p>{{ product.id }}</p>
     <mat-card-title>{{ product.title }}</mat-card-title>
   </mat-card-header>
-  <img mat-card-image src="{{ product.image }}" alt="" width="100" />
   <mat-card-content>
     <p>{{ product.description }}</p>
     <p>price: {{ product.price }}</p>
