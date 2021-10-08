@@ -7,7 +7,7 @@ import { Product } from 'src/models/Product';
   providedIn: 'root',
 })
 export class ProductsService {
-  URL: string = 'https://fakestoreapi.com/products';
+  private URL: string = 'http://localhost:3000/products';
   constructor(private http: HttpClient) {
   }
 

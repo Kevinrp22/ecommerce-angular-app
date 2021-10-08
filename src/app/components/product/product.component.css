@@ -15,3 +15,8 @@
   height: 200px;
   margin: 0px auto;
 }
+
+button{
+  width: 100%;
+  text-align: center;
+}

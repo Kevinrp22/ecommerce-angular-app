@@ -1,0 +1,21 @@
+<div class="container">
+  <form>
+    <mat-form-field>
+      <input
+        matInput
+        type="text"
+        placeholder="Nombre"
+        required
+        [(ngModel)]="model.name"
+        name="name"
+        #name="ngModel"
+      />
+      <mat-error *ngIf="!name.valid || name.pristine">Nombre requerido</mat-error>
+    </mat-form-field>
+    <mat-radio-group>
+      <p>Manera de envío:</p>
+      <mat-radio-button value="contrareembolso" (change)="onToggleChooseDelivery(2)">contrareembolso</mat-radio-button>
+      <mat-radio-button value="" (change)="onToggleChooseDelivery(2)"></mat-radio-button>
+    </mat-radio-group>
+  </form>
+</div>

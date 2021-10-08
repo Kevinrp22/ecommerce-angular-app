@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { UsersService } from 'src/services/users.service';
 
 @Component({
   selector: 'app-login',
@@ -13,11 +15,17 @@ export class LoginComponent implements OnInit {
     Validators.minLength(6),
   ]);
 
-  constructor() {}
+  constructor(public userService: UsersService, public router:Router) {}
 
   ngOnInit() {}
 
   login() {
-    
+    const user = { email: this.email.value, password: this.password.value };
+    this.userService.login(user).subscribe((data) => {
+      console.log(data);
+      
+      this.userService.setToken(data.token);
+      this.router.navigateByUrl("/")
+    });
   }
 }

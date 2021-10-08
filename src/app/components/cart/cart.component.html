@@ -1,0 +1,7 @@
+<ng-container *ngIf="cart$ | async;else emptyCart">
+  <p>{{cart$ | async | json}} </p>
+</ng-container>
+
+<ng-template #emptyCart>
+  <p>Tu carrito está vacio</p>
+</ng-template>

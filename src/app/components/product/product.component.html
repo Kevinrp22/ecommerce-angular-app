@@ -1,15 +1,17 @@
 <mat-card class="card">
-  <div class="container_img">
-    <img mat-card-image src="{{ product.image }}" alt="" class="card_image" />
-  </div>
   <mat-card-header>
     <p>{{ product.id }}</p>
-    <mat-card-title>{{ product.title }}</mat-card-title>
+    <mat-card-title>{{ product.name }}</mat-card-title>
   </mat-card-header>
   <mat-card-content>
     <p>{{ product.description }}</p>
-    <p>price: {{ product.price }}</p>
-    <p>category: {{ product.category }}</p>
-    <div>rate: {{ product.rating.rate }} count: {{ product.rating.count }}</div>
+    <h2 style="color:red">{{ product.price |currency }}</h2>
+    <p>category: {{ product.categoryId }}</p>
+    <p>stock: {{ product.stock }}</p>
   </mat-card-content>
+  <div class="buttons">
+    <button mat-flat-button color="primary" (click)="addProductCart()">Comprar
+      <mat-icon>add_shopping_cart</mat-icon>
+    </button>
+  </div>
 </mat-card>
